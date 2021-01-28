@@ -4,3 +4,13 @@
 .div1{
     height: 10px;
 }
+.textarea{
+    height: 192px;
+    width: 426px;
+    resize: none;
+}
+.div2{
+    height: 50px;
+    width: 426px;
+   
+}
