@@ -25,6 +25,7 @@ export default class Contact extends Component {
                 <h2 className="basliq">Bir mesaj göndərin</h2>
 
                 <div className="div1" />
+                
                 <div>
                     <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                         <div className="form-group">
