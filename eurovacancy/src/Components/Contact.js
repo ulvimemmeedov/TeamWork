@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import { Container } from 'react-bootstrap'
 import "../Asests/css/contact.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser , faPencilAlt ,faEnvelope} from '@fortawesome/free-solid-svg-icons'
+
+
 
 
 export default class Contact extends Component {
@@ -21,53 +20,88 @@ export default class Contact extends Component {
         return (
             <div>
                 <Header />
-                <Container className="container">
-                <h2 className="basliq">Bir mesaj göndərin</h2>
+              
+                <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Bizimlə əlaqə</h3>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            dolorum adipisci recusandae praesentium dicta!
+          </p>
 
-                <div className="div1" />
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>Ismayilbey Gutgashinli St, Baku, Azerbaycan</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>lorem@ipsum.com</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>+994-456-789</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Social :</p>
+            <div class="social-icons">
+              <a href="www.facebook.com">
+              <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="www.twitter.com">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="www.instagram.com">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="www.linkedin.com">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="" autocomplete="off">
+            <h3 class="title">Əlaqə</h3>
+            <div class="input-container">
+              <input type="text" placeholder="Ad Soyad" name="name" required class="input" />
+              <label for=""/>
+             
+            </div>
+            <div class="input-container">
+              <input type="email" placeholder="Email" name="email" required class="input" />
+              <label for=""/>
+              
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Mövzu" name="movzu" class="input" />
+              <label for="" />
+             
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" placeholder="Mesaj" required class="input"></textarea>
+              <label for="" />
+             
+            </div>
+            <input type="submit" value="Göndər" class="btn btn-primary" />
+          </form>
+        </div>
+      </div>
+    </div>
                 
-                <div>
-                    <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                        <div className="form-group">
-                            
-                            <label htmlFor="name"><FontAwesomeIcon icon = {faUser} /> Ad Soyad</label>
-                            <input type="text" placeholder="Ad Soyad *" required className="div2 form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="exampleInputEmail1"> <FontAwesomeIcon icon = {faEnvelope}/> Email</label>
-                            <input type="email" placeholder="Email *" required className="div2 form-control" aria-describedby="emailHelp" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message"> <FontAwesomeIcon icon = {faPencilAlt}/> Mesaj</label>
-                            <input type="text" placeholder="Başlıq" className= "div2 form-control"/>
-                                <div className="div1"></div>
-                             
-                            <textarea className="textarea form-control" required  placeholder=" Mesaj *" rows="5"></textarea>
-                        </div>
-                        <button type="submit" className="btn btn-danger">Göndər</button>
-                    </form>
-                    </div>
-                </Container>
                 <Footer />
             </div>
         )
     }
 
-    onNameChange(event) {
-        this.setState({ name: event.target.value })
-    }
-
-    onEmailChange(event) {
-        this.setState({ email: event.target.value })
-    }
-
-    onMessageChange(event) {
-        this.setState({ message: event.target.value })
-    }
-
-
-    handleSubmit(e) {
-        e.preventDefault();
-
-    }
+    
 }
